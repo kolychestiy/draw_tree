@@ -1,0 +1,49 @@
+digraph tree {
+    "      
+Корень" [fontcolor=black; shape=none];
+    "      
+Левый ребёнок" [fontcolor=blue; shape=none];
+    "      
+Средний ребёнок" [fontcolor=black; shape=none];
+    "      
+Внук" [fontcolor=blue; shape=none];
+    "      
+Внук" [fontcolor=blue; shape=none];
+    "      
+Внук" [fontcolor=black; shape=none];
+    "      
+Правнук" [fontcolor=blue; shape=none];
+    "      
+Внук" [fontcolor=blue; shape=none];
+    "      
+Правый ребёнок" [fontcolor=black; shape=none];
+    "      
+Внук" [fontcolor=blue; shape=none];
+    "      
+Корень" -> "      
+Левый ребёнок";
+    "      
+Корень" -> "      
+Средний ребёнок";
+    "      
+Корень" -> "      
+Правый ребёнок";
+    "      
+Средний ребёнок" -> "      
+Внук";
+    "      
+Средний ребёнок" -> "      
+Внук";
+    "      
+Средний ребёнок" -> "      
+Внук";
+    "      
+Средний ребёнок" -> "      
+Внук";
+    "      
+Внук" -> "      
+Правнук";
+    "      
+Правый ребёнок" -> "      
+Внук";
+}
