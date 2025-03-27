@@ -5,15 +5,24 @@
 1. файл main.py
 2. файл tree.txt
 3. папкка images (может иметь любое содержимое)
-4. возможно установить библиотеки для питона
+4. Но также потребуется установить саму программу Graphviz (не Python-библиотеку):
+
+Windows: 
+
+    Скачайте с официального [сайта](https://graphviz.org/download/) и добавьте в PATH.
+    Распаковать и добавить в переменные PATH путь до папки bin (рекомендую распаковывать архив в program files)
+
+Linux (Ubuntu/Debian):
     
-    <!-- pip install graphviz       # Для визуализации графов/деревьев -->
-    <!-- pip install pillow        # Для работы с изображениями (GIF) -->
-    <!-- pip install imageio       # Альтернатива для создания GIF (опционально) -->
-    <!-- pip install pydot         # Дополнительный интерфейс для graphviz -->
-    <!-- pip install pygraphviz    # Еще один интерфейс для graphviz (если нужен) -->
-    <!-- pip install fpdf          # Для создания PDF из кадров (в примере с PDF) -->
-5. возможно установить библиотеку вне питона
+    sudo apt-get install graphviz
+
+MacOS (через Homebrew):
+
+    brew install graphviz
+
+5. Установить библиотеки для питона
+    pip install anytree
+    pip install graphviz
 
 Запуск:
 
