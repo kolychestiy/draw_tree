@@ -21,7 +21,9 @@ MacOS (через Homebrew):
     brew install graphviz
 
 5. Установить библиотеки для питона
+    
     pip install anytree
+    
     pip install graphviz
 
 Запуск:

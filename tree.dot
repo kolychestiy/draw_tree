@@ -1,49 +1,99 @@
 digraph tree {
-    "      
-Корень" [fontcolor=black; shape=none];
-    "      
-Левый ребёнок" [fontcolor=blue; shape=none];
-    "      
-Средний ребёнок" [fontcolor=black; shape=none];
-    "      
-Внук" [fontcolor=blue; shape=none];
-    "      
-Внук" [fontcolor=blue; shape=none];
-    "      
-Внук" [fontcolor=black; shape=none];
-    "      
-Правнук" [fontcolor=blue; shape=none];
-    "      
-Внук" [fontcolor=blue; shape=none];
-    "      
-Правый ребёнок" [fontcolor=black; shape=none];
-    "      
-Внук" [fontcolor=blue; shape=none];
-    "      
-Корень" -> "      
-Левый ребёнок";
-    "      
-Корень" -> "      
-Средний ребёнок";
-    "      
-Корень" -> "      
-Правый ребёнок";
-    "      
-Средний ребёнок" -> "      
-Внук";
-    "      
-Средний ребёнок" -> "      
-Внук";
-    "      
-Средний ребёнок" -> "      
-Внук";
-    "      
-Средний ребёнок" -> "      
-Внук";
-    "      
-Внук" -> "      
-Правнук";
-    "      
-Правый ребёнок" -> "      
-Внук";
+    "     
+<ExpIf>" [fontcolor=black; shape=none; fontsize=20; fontname=Monospace];
+    "     
+if" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+(" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+<Cond>" [fontcolor=black; shape=none; fontsize=20; fontname=Monospace];
+    "     
+a > 5 and d == 0" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+)" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+then" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+<Do>" [fontcolor=black; shape=none; fontsize=20; fontname=Monospace];
+    "     
+<ExpIf>" [fontcolor=black; shape=none; fontsize=20; fontname=Monospace];
+    "     
+if" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+(" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+<Cond>" [fontcolor=black; shape=none; fontsize=20; fontname=Monospace];
+    "     
+b < 10" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+)" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+then" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+<Do>" [fontcolor=black; shape=none; fontsize=20; fontname=Monospace];
+    "     
+c = 0;" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+else" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+<Do>" [fontcolor=black; shape=none; fontsize=20; fontname=Monospace];
+    "     
+c = 1;" [fontcolor=blue; shape=none; fontsize=20; fontname=Monospace];
+    "     
+<ExpIf>" -> "     
+if";
+    "     
+<ExpIf>" -> "     
+(";
+    "     
+<ExpIf>" -> "     
+<Cond>";
+    "     
+<ExpIf>" -> "     
+)";
+    "     
+<ExpIf>" -> "     
+then";
+    "     
+<ExpIf>" -> "     
+<Do>";
+    "     
+<ExpIf>" -> "     
+else";
+    "     
+<ExpIf>" -> "     
+<Do>";
+    "     
+<Cond>" -> "     
+a > 5 and d == 0";
+    "     
+<Do>" -> "     
+<ExpIf>";
+    "     
+<ExpIf>" -> "     
+if";
+    "     
+<ExpIf>" -> "     
+(";
+    "     
+<ExpIf>" -> "     
+<Cond>";
+    "     
+<ExpIf>" -> "     
+)";
+    "     
+<ExpIf>" -> "     
+then";
+    "     
+<ExpIf>" -> "     
+<Do>";
+    "     
+<Cond>" -> "     
+b < 10";
+    "     
+<Do>" -> "     
+c = 0;";
+    "     
+<Do>" -> "     
+c = 1;";
 }

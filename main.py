@@ -5,7 +5,7 @@ from PIL import Image
 
 def space_num(n):
     s = ""
-    for i in range(6):
+    for i in range(5): 
         s += "\u00A0" if n % 2 else "\u202F"
         n >>= 1
     return s
@@ -64,6 +64,7 @@ def parse_tree_from_file(filename, build_gif):
 
 
 def draw_clean_tree(root, file_name):
+    all_style = "; shape=none; fontsize=20; fontname=Monospace"
     DotExporter(
         root,
         options=[
@@ -74,9 +75,10 @@ def draw_clean_tree(root, file_name):
             # "pad=0.5",  # Отступ от границ изображения
         ],
         nodeattrfunc=lambda node: (
-            f"fontcolor=black; shape=none"
+            (f"fontcolor=black"
             if not node.is_leaf else
-            f"fontcolor=blue; shape=none"
+             f"fontcolor=blue") 
+             + all_style
         ),
     ).to_dotfile("tree.dot")
 
@@ -86,7 +88,7 @@ def draw_clean_tree(root, file_name):
 # Пример использования
 if __name__ == "__main__":
     # Теперь парсим файл
-    is_gif = True
+    is_gif = 1
     root = parse_tree_from_file("tree.txt", is_gif)
 
     if is_gif:
@@ -121,4 +123,7 @@ if __name__ == "__main__":
         print(f"{pre}{node.name}")
 
     draw_clean_tree(root, "tree.png")
-    os.system("code fixed_size_tree.gif")
+    if is_gif:
+        os.system("code fixed_size_tree.gif")
+    else:
+        os.system("code tree.png")
